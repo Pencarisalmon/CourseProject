@@ -1,0 +1,27 @@
+{
+  "name": "my-movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "frontend": "cd frontend && pnpm run dev",
+    "backend": "nodemon backend/index.js",
+    "fullstack": "concurrently \"pnpm run frontend\" \"pnpm run backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "concurrently": "^9.1.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0",
+    "multer": "^2.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
