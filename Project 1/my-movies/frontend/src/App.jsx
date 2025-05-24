@@ -1,12 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import Navigation from "./pages/Auth/Navigation";
 const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">Welcome to My App</h1>
-      <p className="mt-4 text-lg text-gray-700">This is a simple React app with Tailwind CSS.</p>
-    </div>
-  )
-}
+    <>
+      <ToastContainer />
+      <Navigation />
+      <main className="3py">
+        <Outlet />
+      </main>
+    </>
+  );
+};
 
-export default App
+export default App;
